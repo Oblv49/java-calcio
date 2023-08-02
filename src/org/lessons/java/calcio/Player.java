@@ -4,8 +4,8 @@ public class Player extends Person{
     //VARIABLES
     private String playerRole;
     //CONSTRUCTOR
-    public Player(String name, int age, String playerRole) {
-        super(name, age);
+    public Player(String name, String playerRole) {
+        super(name);
         this.playerRole = playerRole;
     }
     //getter & setter

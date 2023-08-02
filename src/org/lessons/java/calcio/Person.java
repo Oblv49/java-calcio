@@ -7,7 +7,7 @@ public abstract class Person {
     private String name;
     private int age;
     //CONSTRUCTOR
-    public Person(String name, int age) {
+    public Person(String name) {
         this.name = name;
         this.age = age;
     }
@@ -36,19 +36,8 @@ public abstract class Person {
     }
 
     //methods private
-        //generation name random
-        private String randomName() {
-            Random random = new Random();
-            String charAlphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            int lengthCode = 7;
-            char[] code = new char[lengthCode];
-            for (int i = 0; i < lengthCode; i++) {
-                int indexRandom = random.nextInt(charAlphanumeric.length());
-                code[i] = charAlphanumeric.charAt(indexRandom);
-            }
-            alfanumericCode = new String(code);
-            return alfanumericCode;
-        }
+        //generation random age
+        //creare metodo random che genera un'età compresa tra 18 e 45
 
 
 }
