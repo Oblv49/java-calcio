@@ -74,10 +74,15 @@ public class SoccerTeam {
     //toString
     @Override
     public String toString() {
-        return "SoccerTeam: " +
-                coach + "\n" +
-                "GoalKeeper= " + goalKeeper + "\n" +
-                "Players:" + soccerTeam +
-                '.';
+        StringBuilder result = new StringBuilder("SoccerTeam:\n");
+        result.append("Coach:\n").append(coach).append("\n");
+        result.append("Goalkeeper: ").append(goalKeeper).append("\n");
+        result.append("Players:\n");
+
+        for (Person player : soccerTeam) {
+            result.append(player).append("\n");
+        }
+
+        return result.toString();
     }
 }
