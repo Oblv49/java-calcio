@@ -29,7 +29,7 @@ public abstract class Person {
     //tostring
     @Override
     public String toString() {
-        return "Person: " +
+        return
                 "name= " + name +
                 ", age= " + age +
                 '.';
@@ -37,7 +37,6 @@ public abstract class Person {
 
     //methods private
         //generation random age
-        //creare metodo random che genera un'età compresa tra 18 e 45
 
 
 }

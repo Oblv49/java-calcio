@@ -20,7 +20,9 @@ public class Player extends Person{
     //toString
     @Override
     public String toString() {
-        return "Player: " +
+        return
+                "Player: " +
+                super.toString() +
                 "playerRole= " + playerRole +
                 '.';
     }

@@ -20,8 +20,10 @@ public class Coach extends Person{
     //toString
     @Override
     public String toString() {
-        return "Coach{" +
-                "strategy='" + strategy + '\'' +
-                '}';
+        return
+                "Coach: " +
+                super.toString() +
+                " strategy= " + strategy +
+                '.';
     }
 }

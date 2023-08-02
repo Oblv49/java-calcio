@@ -15,6 +15,10 @@ package org.lessons.java.calcio;
 */
 public class Main {
     public static void main(String[] args) {
-
+        Player p1 = Generator.generatePlayer();
+        System.out.println(p1);
+        Coach c1 = Generator.generateCoach();
+        System.out.println(c1);
     }
 }
+
