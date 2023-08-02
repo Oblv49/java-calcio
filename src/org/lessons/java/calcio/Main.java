@@ -19,11 +19,10 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Generator generator = new Generator();
-        Coach coach = generator.generateCoach();
-        Player goalkeeper = generator.generateGoalKeeper();
-        ArrayList<Player> players = generator.generatePlayerList(10);
-        SoccerTeam team = new SoccerTeam(coach, goalkeeper, players, generator.getStrategyToRolesMap());
+        Coach coach = Generator.generateCoach();
+        Player goalkeeper = Generator.generateGoalKeeper();
+        ArrayList<Player> players = Generator.generatePlayerList(10);
+        SoccerTeam team = new SoccerTeam(coach, goalkeeper, players, Generator.getStrategyToRolesMap());
         team.assignRolesToPlayers();
         System.out.println("------------------------------------");
         System.out.println("ECCO LA TUA SQUADRA GENERATA RANDOM:");
