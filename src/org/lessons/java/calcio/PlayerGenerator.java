@@ -25,6 +25,7 @@ public class PlayerGenerator {
             "Angelo Ruggiero", "Carmine Sorrentino", "Emanuele Farina", "Francesco Rinaldi",
             "Luigi Esposito", "Domenico Vitale", "Antonio De Angelis", "Mario Barbieri", "Giovanni Marchetti",
             "Francesco Russo", "Raffaele Martini", "Federico Coppola", "Emanuele Bellini", "Alessio Ricci"};
+    private static String namePlayer;
     private static final String[] roleContainer = {};
 
 
