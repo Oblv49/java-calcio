@@ -74,11 +74,12 @@ public class Generator {
     private static final Random random = new Random();
     private static String nameCoach;
     private static String namePlayer;
+    private static String nameGoalKeeper;
     private static String rolePlayer;
     private static String strategy;
     private static final ArrayList<String> usedNames = new ArrayList<>();
     private static final ArrayList<String> usedNamesCoach = new ArrayList<>();
-
+    private static final ArrayList<String> usedNamesGoalKeeper = new ArrayList<>();
     //getter & setter
         //get
         public static String getNameCoach() {
@@ -87,6 +88,9 @@ public class Generator {
         public static String getNamePlayer() {
             return namePlayer;
         }
+        public static String getNameGoalKeeper() {
+        return nameGoalKeeper;
+    }
         public static String getRolePlayer() {
             return rolePlayer;
         }
@@ -103,6 +107,10 @@ public class Generator {
     public static Player generatePlayer() {
         generateNameRandom();
         return new Player(namePlayer, rolePlayer);
+    }
+    public static Player generateGoalKeeper() {
+        generateGoalKeeperNameRandom();
+        return new Player(nameGoalKeeper, rolePlayer = "Portiere");
     }
     public static Coach generateCoach() {
         generateCoachNameRandom();
@@ -142,6 +150,19 @@ public class Generator {
             usedNamesCoach.add(nameCoach );
             return nameCoach;
         }
+        //generation name goal keeper random
+        private static String generateGoalKeeperNameRandom() {
+            if (usedNamesGoalKeeper.size() == nameContainer.size()) {
+                usedNamesGoalKeeper.clear();
+            }
+            int indexRandom;
+            do {
+                indexRandom = random.nextInt(nameContainer.size());
+                nameGoalKeeper = nameContainer.get(indexRandom);
+            } while (usedNamesGoalKeeper.contains(nameGoalKeeper));
+            usedNamesGoalKeeper.add(nameGoalKeeper);
+            return nameGoalKeeper;
+        }
         //generation strategy random
         private static String generateStrategyRandom() {
             int indexRandom;
@@ -149,6 +170,17 @@ public class Generator {
             strategy = strategyContainer.get(indexRandom);
             return strategy;
         }
+        //generation array players
+        public static ArrayList<Player> generatePlayerList(int count) {
+            ArrayList<Player> players = new ArrayList<>();
+            for (int i = 0; i < count; i++) {
+                Player player = generatePlayer();
+                players.add(player);
+            }
+            return players;
+        }
+
+
 
 
 }

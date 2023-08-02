@@ -1,4 +1,7 @@
 package org.lessons.java.calcio;
+
+import java.util.ArrayList;
+
 /*
 *   Creare una classe Persona con gli attributi nome ed età.
 *    Estendere la classe Persona con una classe Giocatore e una classe Allenatore: ogni giocatore ha un ruolo e
@@ -15,10 +18,17 @@ package org.lessons.java.calcio;
 */
 public class Main {
     public static void main(String[] args) {
-        Player p1 = Generator.generatePlayer();
-        System.out.println(p1);
-        Coach c1 = Generator.generateCoach();
-        System.out.println(c1);
+        Generator generator = new Generator();
+        Coach coach = generator.generateCoach();
+        Player goalkeeper = generator.generateGoalKeeper();
+        ArrayList<Player> players = generator.generatePlayerList(10);
+        SoccerTeam team = new SoccerTeam(coach, goalkeeper, players, generator.getStrategyToRolesMap());
+        team.assignRolesToPlayers();
+        System.out.println("------------------------------------");
+        System.out.println("ECCO LA TUA SQUADRA GENERATA RANDOM:");
+        System.out.println("------------------------------------");
+        System.out.println(team);
+        System.out.println("------------------------------------");
     }
 }
 

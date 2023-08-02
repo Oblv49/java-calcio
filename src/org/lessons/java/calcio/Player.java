@@ -21,7 +21,6 @@ public class Player extends Person{
     @Override
     public String toString() {
         return
-                "Player: " +
                 super.toString() +
                 " playerRole= " + playerRole +
                 '.';

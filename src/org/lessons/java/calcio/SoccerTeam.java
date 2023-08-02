@@ -75,8 +75,9 @@ public class SoccerTeam {
     @Override
     public String toString() {
         return "SoccerTeam: " +
-                "coach= " + coach +
-                ", soccerTeam= " + soccerTeam +
+                coach + "\n" +
+                "GoalKeeper= " + goalKeeper + "\n" +
+                "Players:" + soccerTeam +
                 '.';
     }
 }
