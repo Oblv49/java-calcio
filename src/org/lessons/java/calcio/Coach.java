@@ -21,7 +21,6 @@ public class Coach extends Person{
     @Override
     public String toString() {
         return
-                "Coach: " +
                 super.toString() +
                 " strategy= " + strategy +
                 '.';

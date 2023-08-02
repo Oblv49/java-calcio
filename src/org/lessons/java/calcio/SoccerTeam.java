@@ -76,7 +76,7 @@ public class SoccerTeam {
     public String toString() {
         StringBuilder result = new StringBuilder("SoccerTeam:\n");
         result.append("Coach:\n").append(coach).append("\n");
-        result.append("Goalkeeper: ").append(goalKeeper).append("\n");
+        result.append("Goalkeeper:\n").append(goalKeeper).append("\n");
         result.append("Players:\n");
 
         for (Person player : soccerTeam) {
