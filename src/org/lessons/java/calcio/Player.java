@@ -23,7 +23,7 @@ public class Player extends Person{
         return
                 "Player: " +
                 super.toString() +
-                "playerRole= " + playerRole +
+                " playerRole= " + playerRole +
                 '.';
     }
 }

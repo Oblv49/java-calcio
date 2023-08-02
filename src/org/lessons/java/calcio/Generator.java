@@ -79,6 +79,24 @@ public class Generator {
     private static final ArrayList<String> usedNames = new ArrayList<>();
     private static final ArrayList<String> usedNamesCoach = new ArrayList<>();
 
+    //getter & setter
+        //get
+        public static String getNameCoach() {
+            return nameCoach;
+        }
+        public static String getNamePlayer() {
+            return namePlayer;
+        }
+        public static String getRolePlayer() {
+            return rolePlayer;
+        }
+        public static String getStrategy() {
+            return strategy;
+        }
+        public static Map<String, int[]> getStrategyToRolesMap() {
+            return strategyToRolesMap;
+        }
+
 
 
     //methods
@@ -88,6 +106,7 @@ public class Generator {
     }
     public static Coach generateCoach() {
         generateCoachNameRandom();
+        generateStrategyRandom();
         return new Coach(nameCoach, strategy);
     }
     //toString
@@ -122,6 +141,13 @@ public class Generator {
             } while (usedNamesCoach.contains(nameCoach));
             usedNamesCoach.add(nameCoach );
             return nameCoach;
+        }
+        //generation strategy random
+        private static String generateStrategyRandom() {
+            int indexRandom;
+            indexRandom = random.nextInt(strategyContainer.size());
+            strategy = strategyContainer.get(indexRandom);
+            return strategy;
         }
 
 
